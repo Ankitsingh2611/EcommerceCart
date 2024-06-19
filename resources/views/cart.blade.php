@@ -136,7 +136,7 @@
 
                     <div class="col-lg-4 col-sm-6 ">
                         <div class="checkout-button">
-                            <a href="{{route('checkout.payment')}}" class="btn btn-solid-default btn fw-bold">
+                            <a href="{{route('checkout.index')}}" class="btn btn-solid-default btn fw-bold">
                                 Check Out <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                                         <h6>Total <span>${{Cart::instance('cart')->total()}}</span></h6>
                                     </div>
                                     <div class="bottom-details">
-                                        <a href="{{route('checkout.payment')}}">Process Checkout</a>
+                                        <a href="{{route('checkout.index')}}">Process Checkout</a>
                                     </div>
                                 </div>
                             </div>

@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.base')
 @section('content')
 <div class="container">
     <div class="row">
@@ -17,8 +16,7 @@
                                 <div class="d-flex flex-row align-items-center mb-4 pb-1">
                                     <div class="flex-fill mx-3">
                                         <div class="form-outline">
-                                            <input type="text" name="card_number" id="formControlLgXs" class="form-control form-control-lg"
-                                                value="" maxlength="19"/>
+                                            <input type="text" name="card_number" id="formControlLgXs" class="form-control form-control-lg" maxlength="19" required>
                                             <label class="form-label" for="formControlLgXs">Card Number</label>
                                         </div>
                                     </div>
@@ -28,22 +26,19 @@
                                 <div class="row mb-4">
                                     <div class="col-6">
                                         <div class="form-outline">
-                                            <input type="text" name="expire_date" id="formControlLgExpk" class="form-control form-control-lg"
-                                                placeholder="MM/YYYY"/>
+                                            <input type="text" name="expire_date" id="formControlLgExpk" class="form-control form-control-lg" placeholder="MM/YYYY" required>
                                             <label class="form-label" for="formControlLgExpk">Expire</label>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-outline">
-                                            <input type="password" name="cvv" id="formControlLgcvv" class="form-control form-control-lg"
-                                                placeholder="CVV"/>
-                                            <label class="form-label" for="formControlLgcvv">Cvv</label>
+                                            <input type="password" name="cvv" id="formControlLgcvv" class="form-control form-control-lg" placeholder="CVV" required>
+                                            <label class="form-label" for="formControlLgcvv">CVV</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <input type="text" name="cardholder_name" id="formControlLgXsd" class="form-control form-control-lg"
-                                        value=""/>
+                                    <input type="text" name="cardholder_name" id="formControlLgXsd" class="form-control form-control-lg" required>
                                     <label class="form-label" for="formControlLgXsd">Cardholder's Name</label>
                                 </div>
                                 <input style="float: right" type="submit" name="submit" class="btn btn-success btn-lg btn-block" value="Pay Now">

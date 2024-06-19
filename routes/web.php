@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AdminController;
@@ -8,17 +9,6 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', [AppController::class, 'index'])->name('app.index');
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
@@ -37,9 +27,9 @@ Route::delete('/wishlist/remove', [WishlistController::class, 'removeProductFrom
 Route::delete('/wishlist/clear', [WishlistController::class, 'clearWishlist'])->name('wishlist.clear');
 Route::post('/wishlist/move-to-cart', [WishlistController::class, 'moveToCart'])->name('wishlist.move.to.cart');
 
-Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout.index'); // For displaying the checkout form
-Route::post('/checkout/payment', [CheckoutController::class, 'processPayment'])->name('checkout.payment'); // For handling form submission
-Route::get('/payment-success', [CheckoutController::class, 'paymentSuccess'])->name('payment.success');
+Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout.index'); // Display checkout form
+Route::post('/checkout/payment', [CheckoutController::class, 'processPayment'])->name('checkout.payment'); // Handle payment submission
+Route::get('/payment-success', [CheckoutController::class, 'paymentSuccess'])->name('payment.success'); // Display payment success page
 
 Auth::routes();
 
